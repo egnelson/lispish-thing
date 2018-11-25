@@ -1,0 +1,13 @@
+(module asdf:fdsa)
+
+(+ 1 1)
+
+(protocol witty-comeback () :respond)
+
+(witty-comeback no-u
+  (:respond (lambda () "no, u")))
+
+(witty-comeback what-she-said
+  (:respond (lambda () "that's what she said!")))
+
+3.14159e-200
