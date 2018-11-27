@@ -117,6 +117,11 @@ int main(int argc, char **argv)
     auto it = s.begin();
     if (it != s.end())
     {
+      for (auto st : s)
+      {
+        std::cout << "`" << st << "` ";
+      }
+      std::cout << std::endl;
       if (it->compare("t") == 0 && s.size() > 3)
       {
         it++;
@@ -131,39 +136,39 @@ int main(int argc, char **argv)
         std::string type{*it++};
         std::string input{*it++};
         std::string expected{*it++};
-        if (it->compare("Ident") == 0)
+        if (type.compare("Ident") == 0)
         {
           test_parse<Ident>(name, type, input, expected);
         }
-        else if (it->compare("Number") == 0)
+        else if (type.compare("Number") == 0)
         {
           test_parse<Number>(name, type, input, expected);
         }
-        else if (it->compare("Char") == 0)
+        else if (type.compare("Char") == 0)
         {
           test_parse<Char>(name, type, input, expected);
         }
-        else if (it->compare("Bool") == 0)
+        else if (type.compare("Bool") == 0)
         {
           test_parse<Bool>(name, type, input, expected);
         }
-        else if (it->compare("String") == 0)
+        else if (type.compare("String") == 0)
         {
           test_parse<String>(name, type, input, expected);
         }
-        else if (it->compare("Symbol") == 0)
+        else if (type.compare("Symbol") == 0)
         {
           test_parse<Symbol>(name, type, input, expected);
         }
-        else if (it->compare("Atom") == 0)
+        else if (type.compare("Atom") == 0)
         {
           test_parse<Atom>(name, type, input, expected);
         }
-        else if (it->compare("Value") == 0)
+        else if (type.compare("Value") == 0)
         {
           test_parse<Value>(name, type, input, expected);
         }
-        else if (it->compare("List") == 0)
+        else if (type.compare("List") == 0)
         {
           test_parse<List>(name, type, input, expected);
         }

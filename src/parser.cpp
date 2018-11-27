@@ -217,7 +217,7 @@ namespace lang::parser {
         for (auto& p : regexes)
         {
           std::cmatch m;
-          if (std::regex_match(str, m, p.second))
+          if (std::regex_search(str, m, p.second))
           {
             out.first = p.first;
             out.second = m.str(0);
@@ -232,11 +232,6 @@ namespace lang::parser {
            *this && (c == ' ' || c == '\t' || c == '\n' || c == '\r');
            bump(), c = buffer[index])
       {}
-    }
-
-    if (!quiet)
-    {
-      std::cout << "Token " << token_to_string(out.first) << ":" << out.second << "" << std::endl;
     }
 
     return out;

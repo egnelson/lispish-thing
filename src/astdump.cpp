@@ -138,6 +138,10 @@ int main(int argc, char **argv)
     {
       tokenize(s);
     }
+    else
+    {
+      parse(s);
+    }
   }
 
   return 0;

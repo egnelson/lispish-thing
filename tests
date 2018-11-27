@@ -2,3 +2,5 @@ t,A,(1),(,1,)
 t,B,(),(,)
 t,C,(123 "asdf" :w3),(,123,"asdf",:w3,)
 t,D,(123 "asdf" ( '\xff' '\t' 'a' '(+)	1 'd '(+ 1 2	))	),(,123,"asdf",(,'\xff','\t','a','(,+,),1,'d,'(,+,1,2,),),)
+p,1,Atom,'asdf,A(Symbol('asdf))
+The last line is ignored.
